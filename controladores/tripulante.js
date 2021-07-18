@@ -38,7 +38,7 @@ exports.new = function (req, res) {
             res.json(err);
         else
             res.json({
-                message: 'New tripulante created!',
+                message: 'nuevo tripulante creado!',
                 data: tripulante
             });
     });
@@ -50,7 +50,7 @@ exports.view = function (req, res) {
         if (err)
             res.send(err);
         res.json({
-            message: 'tripulante details loading..',
+            message: 'cargando detalles del tripulante..',
             data: tripulante
         });
     });
