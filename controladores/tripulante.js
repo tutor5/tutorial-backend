@@ -46,7 +46,7 @@ exports.new = function (req, res) {
 
 
 exports.view = function (req, res) {
-    tripulante.findById(req.params.tripulante_id, function (err, tripulante) {
+    Tripulante.findById(req.params.tripulante_id, function (err, tripulante) {
         if (err)
             res.send(err);
         res.json({
@@ -57,7 +57,7 @@ exports.view = function (req, res) {
 };
 // Handle update tripulante info
 exports.update = function (req, res) {
-    tripulante.findById(req.params.tripulante_id, function (err, tripulante) {
+    Tripulante.findById(req.params.tripulante_id, function (err, tripulante) {
         if (err)
             res.send(err);
         tripulante.nombre = req.body.nombre ? req.body.nomobre : tripulante.nombre;
@@ -78,7 +78,7 @@ exports.update = function (req, res) {
 };
 // Handle delete tripulante
 exports.delete = function (req, res) {
-    tripulante.remove({
+    Tripulante.remove({
         _id: req.params.tripulante_id
     }, function (err, tripulante) {
         if (err)
