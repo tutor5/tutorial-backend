@@ -39,5 +39,5 @@ app.get('/', (req, res) => res.send('tutorial backend mision tic'));
 app.use('/api', apiRoutes);
 // Launch app to listen to specified port
 app.listen(port, function () {
-    console.log("corriendo backend del  api en el puerto " + port);
+    console.log("corriendo backend del  api en el puerhjfghfjghto " + port);
 });
